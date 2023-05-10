@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer base {
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #363636;
+  }
+  h1 {
+    @apply text-[32px] lg:text-5xl font-bold
+  }
+  h2 {
+    @apply text-[28px] lg:text-4xl font-bold
+  }
+  h3 {
+    @apply text-2xl lg:text-[32px] font-bold
+  }
+  h4 {
+    @apply text-xl lg:text-[28px] font-bold
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@layer components {
+  .banner-rocket-ball {
+    @apply after:absolute after:w-20 after:h-[76px] after:bg-[#BFC9F0] after:rounded-full after:right-0 after:top-1/2 after:translate-x-[50%] after:translate-y-[-50%] after:-z-10
+  }
+
+  .banner-space-ball {
+    @apply after:absolute after:w-20 after:h-[76px] after:bg-space_violet_dark after:rounded-full after:right-0 after:top-1/2 after:translate-x-[50%] after:translate-y-[-50%] after:-z-10 after:opacity-50
+  }
 }
