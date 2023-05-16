@@ -1,15 +1,15 @@
 import Image from 'next/image';
-import rocket from '/public/images/banner/rocket.png';
-import rocketBtn from '/public/images/banner/rocketBtn.svg';
+import shareSpace from '/public/images/banner/shareSpace.png';
+import spaceBtn from '/public/images/banner/spaceBtn.svg';
 import arrowLeft from '/public/images/banner/arrowLeft.svg';
 
-export function RocketCardMobile() {
+export function SpaceCardMobile() {
   return (
-    <div className="w-[294px] border-2 rounded-2xl border-neutral-300 py-[23px] px-[25px] bg-white relative banner-rocket-ball group">
+    <div className="w-[294px] border-2 rounded-2xl border-neutral-300 py-[23px] px-[25px] bg-white relative banner-space-ball group">
       <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
         <div className="relative">
           <Image
-            src={rocketBtn}
+            src={spaceBtn}
             alt="banner"
             width={60}
             height={60}
@@ -24,12 +24,11 @@ export function RocketCardMobile() {
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
-
       <div className="flex space-x-3 mb-2">
-        <Image src={rocket} alt="banner" width={48} height={48} />
-        <h1>火箭隊</h1>
+        <Image src={shareSpace} alt="banner" width={48} height={48} />
+        <p className='h1'>共同空間</p>
       </div>
-      <p className="text-xl text-neutral-500 font-bold">Bootcamp Rocket</p>
+      <p className="text-xl text-neutral-500 font-bold">Co-working Space</p>
     </div>
   );
 }

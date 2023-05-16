@@ -8,28 +8,42 @@
   body {
     font-family: 'Josefin Sans', sans-serif;
     color: #363636;
+    letter-spacing: 0.02em;
   }
-  h1 {
-    @apply text-[32px] lg:text-5xl font-bold
+  a {
+    @apply hover:opacity-80 active:scale-75 duration-300 transform
   }
-  h2 {
-    @apply text-[28px] lg:text-4xl font-bold
-  }
-  h3 {
-    @apply text-2xl lg:text-[32px] font-bold
-  }
-  h4 {
-    @apply text-xl lg:text-[28px] font-bold
+  button {
+    @apply active:scale-75 duration-300 transform
   }
 }
 
 
 @layer components {
+  .h1 {
+    @apply text-[32px] lg:text-5xl font-bold
+  }
+  .h2 {
+    @apply text-[28px] lg:text-4xl font-bold
+  }
+  .h3 {
+    @apply text-2xl lg:text-[32px] font-bold
+  }
+  .h4 {
+    @apply text-xl lg:text-[28px] font-bold
+  }
   .banner-rocket-ball {
     @apply after:absolute after:w-20 after:h-[76px] after:bg-[#BFC9F0] after:rounded-full after:right-0 after:top-1/2 after:translate-x-[50%] after:translate-y-[-50%] after:-z-10
   }
 
   .banner-space-ball {
     @apply after:absolute after:w-20 after:h-[76px] after:bg-space_violet_dark after:rounded-full after:right-0 after:top-1/2 after:translate-x-[50%] after:translate-y-[-50%] after:-z-10 after:opacity-50
+  }
+}
+
+@layer components {
+  .vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
   }
 }

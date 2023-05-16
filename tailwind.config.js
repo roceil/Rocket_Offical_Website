@@ -27,6 +27,8 @@ module.exports = {
       },
       backgroundImage: {
         banner_bg: "url('/images/banner/banner-bg.svg')",
+        training_bg: "url('/images/aboutTraining/training-bg.svg')",
+        training_bg_large: "url('/images/aboutTraining/training-bg-large.svg')",
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
@@ -37,6 +39,7 @@ module.exports = {
       padding: {
         DEFAULT: '20px',
         sm: '48px',
+        lg: '72px',
       },
     },
     screens: {
