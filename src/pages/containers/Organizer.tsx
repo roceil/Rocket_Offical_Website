@@ -15,7 +15,49 @@ import skw_SM from 'public/images/organizer/organizer-skw-sm.png';
 import wistron_LG from 'public/images/organizer/organizer-wistron-lg.png';
 import wistron_SM from 'public/images/organizer/organizer-wistron-sm.png';
 
-export const organizers = [
+const organizers = [
+  {
+    name: '火箭隊',
+    character: '主辦單位',
+    logo_LG: rocket_LG,
+    logo_SM: rocket_SM,
+  },
+  {
+    name: '六角學院',
+    character: '協辦單位',
+    logo_LG: hexschool_LG,
+    logo_SM: hexschool_SM,
+  },
+  {
+    name: '好想工作室',
+    character: '協辦單位',
+    logo_LG: goodidea_LG,
+    logo_SM: goodidea_SM,
+  },
+  {
+    name: '凱鈿科技',
+    character: '合作招募廠商',
+    logo_LG: kdan_LG,
+    logo_SM: kdan_SM,
+  },
+  {
+    name: '鈦坦科技',
+    character: '合作招募廠商',
+    logo_LG: titan_LG,
+    logo_SM: titan_SM,
+  },
+  {
+    name: '坂和企業',
+    character: '合作招募廠商',
+    logo_LG: skw_LG,
+    logo_SM: skw_SM,
+  },
+  {
+    name: '緯創資通',
+    character: '合作招募廠商',
+    logo_LG: wistron_LG,
+    logo_SM: wistron_SM,
+  },
   {
     name: '火箭隊',
     character: '主辦單位',

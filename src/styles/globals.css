@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   body {
     font-family: 'Josefin Sans', sans-serif;
@@ -11,33 +9,38 @@
     letter-spacing: 0.02em;
   }
   a {
-    @apply hover:opacity-80 active:scale-75 duration-300 transform
+    @apply transform duration-300 hover:opacity-80 active:scale-75;
   }
   button {
-    @apply active:scale-75 duration-300 transform
+    @apply transform duration-300 active:scale-75;
   }
 }
 
-
 @layer components {
   .h1 {
-    @apply text-[32px] lg:text-5xl font-bold
+    @apply text-[32px] font-bold lg:text-5xl;
   }
   .h2 {
-    @apply text-[28px] lg:text-4xl font-bold
+    @apply text-[28px] font-bold lg:text-4xl;
   }
   .h3 {
-    @apply text-2xl lg:text-[32px] font-bold
+    @apply text-2xl font-bold lg:text-[32px];
   }
   .h4 {
-    @apply text-xl lg:text-[28px] font-bold
+    @apply text-xl font-bold lg:text-[28px];
   }
   .banner-rocket-ball {
-    @apply after:absolute after:w-20 after:h-[76px] after:bg-[#BFC9F0] after:rounded-full after:right-0 after:top-1/2 after:translate-x-[50%] after:translate-y-[-50%] after:-z-10
+    @apply after:absolute after:right-0 after:top-1/2 after:-z-10 after:h-[76px] after:w-20 after:translate-x-[50%] after:translate-y-[-50%] after:rounded-full after:bg-[#BFC9F0];
   }
 
   .banner-space-ball {
-    @apply after:absolute after:w-20 after:h-[76px] after:bg-space_violet_dark after:rounded-full after:right-0 after:top-1/2 after:translate-x-[50%] after:translate-y-[-50%] after:-z-10 after:opacity-50
+    @apply after:absolute after:right-0 after:top-1/2 after:-z-10 after:h-[76px] after:w-20 after:translate-x-[50%] after:translate-y-[-50%] after:rounded-full after:bg-space_violet_dark after:opacity-50;
+  }
+  .costTextAccent {
+    @apply after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-1/2 after:w-full after:bg-accent;
+  }
+  .orderNowBtnPosition {
+    @apply absolute bottom-0 left-1/2 w-[332px] -translate-x-1/2 translate-y-1/2
   }
 }
 

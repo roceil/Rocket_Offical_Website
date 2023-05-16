@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+import orderNowBtn from 'public/images/aboutTraining/orderNowBtn.svg';
 import frontEnd from 'public/images/aboutTraining/frontEnd.svg';
 import backEnd from 'public/images/aboutTraining/backEnd.svg';
 import ui from 'public/images/aboutTraining/ui.svg';
@@ -12,9 +13,9 @@ import casper_LG from 'public/images/aboutTraining/coach-casper-3x.png';
 import casper_SM from 'public/images/aboutTraining/coach-casper-2x.png';
 import justin_LG from 'public/images/aboutTraining/coach-justin-3x.png';
 import justin_SM from 'public/images/aboutTraining/coach-justin-2x.png';
-import orderNowBtn from 'public/images/aboutTraining/orderNowBtn.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper';
+import { OrderBtn } from '../components/OrderBtn';
 
 const frontEndTexts = [
   { text: '網頁切版技能：HTML5、CSS3、SCSS、Bootsrap5、TailwindCSS' },
@@ -192,13 +193,14 @@ export function AboutTraining() {
           關於培訓
         </h2>
 
-        <button
-          type="button"
-          className="absolute bottom-0 left-1/2 w-[332px] -translate-x-1/2 translate-y-1/2 rounded-2xl border-2 border-neutral-700 bg-rocket_blue_tint py-5 lg:w-[1076px] lg:py-6 lg:flex lg:justify-center lg:items-center group"
-        >
-          <p className="h3 relative lg:left-[32px] lg:group-hover:left-0 duration-300 transform lg:mr-5">馬上報名！</p>
-          <Image src={orderNowBtn} alt="馬上報名！" width={64} height={64} className='opacity-0 lg:group-hover:opacity-100 duration-300 transform hidden lg:block'/>
-        </button>
+        {/* 馬上報名_按鈕 */}
+        <OrderBtn
+          image={orderNowBtn}
+          text="馬上報名！"
+          bgColor="#E5EBFF"
+          needPosition
+        />
+
         {/* 近期梯次_手機版 */}
         <div className="container lg:hidden">
           <div className="relative mb-20 flex items-center rounded-[50px] bg-white px-5 py-3">
