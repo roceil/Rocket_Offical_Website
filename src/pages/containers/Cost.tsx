@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import promotion_LG from 'public/images/cost/promotion-lg.svg';
 import promotion_SM from 'public/images/cost/promotion-sm.svg';
 import fillFormNowBtn from 'public/images/cost/fillFormNowBtn.svg';
-import { CostCardPC } from '../components/CostCardPC';
-import { OrderBtn } from '../components/OrderBtn';
+import CostCardPC from '../components/CostCardPC';
+import OrderBtn from '../components/OrderBtn';
 
 const costCardData = [
   {
@@ -105,10 +106,24 @@ export function Cost() {
           </p>
 
           {/* 方案卡片_手機版 */}
-          <div className="mb-8 h-[448px] w-[333px] rounded-2xl bg-red-300 lg:hidden"></div>
+          <Swiper
+            slidesPerView={'auto'}
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper mb-8 lg:!hidden"
+          >
+            <SwiperSlide className='!h-[448px] '>
+              <div className="mb-8 w-full h-full rounded-2xl bg-red-300 lg:hidden"></div>
+            </SwiperSlide>
+            <SwiperSlide className='!h-[448px] !w-[333px]'>
+              <div className="mb-8 w-full h-full rounded-2xl bg-red-300 lg:hidden"></div>
+            </SwiperSlide>
+          </Swiper>
 
           {/* 方案卡片_桌機版 */}
-          <ul className="hidden lg:mb-10 lg:flex lg:space-x-6">
+          <ul className=" hidden lg:mb-10 lg:flex lg:space-x-6">
             {costCardData.map(({ title, price, optional, service }) => (
               <CostCardPC
                 key={title}

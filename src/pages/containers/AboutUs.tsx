@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function AboutUs() {
   return (
     <section className="bg-banner_bg">

@@ -11,7 +11,7 @@ type CostCardPCProps = {
   }[];
 };
 
-export function CostCardPC({
+function CostCardPC({
   title,
   price,
   optional,
@@ -49,3 +49,5 @@ export function CostCardPC({
     </li>
   );
 }
+
+export default CostCardPC;

@@ -50,3 +50,10 @@
     text-orientation: upright;
   }
 }
+
+.swiper-slide-active{
+  @apply !w-[300px];
+}
+.swiper-slide-prev {
+  @apply !w-[360px];
+}

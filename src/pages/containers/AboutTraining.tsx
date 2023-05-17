@@ -15,7 +15,7 @@ import justin_LG from 'public/images/aboutTraining/coach-justin-3x.png';
 import justin_SM from 'public/images/aboutTraining/coach-justin-2x.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper';
-import { OrderBtn } from '../components/OrderBtn';
+import OrderBtn from '../components/OrderBtn';
 
 const frontEndTexts = [
   { text: '網頁切版技能：HTML5、CSS3、SCSS、Bootsrap5、TailwindCSS' },

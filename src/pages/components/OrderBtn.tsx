@@ -7,7 +7,7 @@ type orderBtnProps = {
   needPosition?: boolean;
 };
 
-export function OrderBtn({
+function OrderBtn({
   image,
   text,
   bgColor,
@@ -36,3 +36,5 @@ export function OrderBtn({
     </button>
   );
 }
+
+export default OrderBtn;

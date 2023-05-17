@@ -36,6 +36,8 @@ import traffic_LG from 'public/images/description/service/ic-traffic-lg.svg';
 import traffic_SM from 'public/images/description/service/ic-traffic-sm.svg';
 import food_LG from 'public/images/description/service/ic-food-lg.svg';
 import food_SM from 'public/images/description/service/ic-food-sm.svg';
+import ServiceCardMobile from 'src/pages/components/ServiceCardMobile';
+import ServiceCardPC from '../components/ServiceCardPC';
 
 const hardwareDescriptions = [
   {
@@ -119,40 +121,76 @@ const marqueeItems = [
 const serviceData = [
   {
     title: '咖啡、茶水',
-    content:
+    content_LG: (
+      <p>
+        飲水機、冰箱、微波爐、果汁機、 <br />
+        膠囊咖啡機及不定時茶包及小餅乾零食
+      </p>
+    ),
+    content_SM:
       '飲水機、冰箱、微波爐、果汁機、 膠囊咖啡機及不定時茶包及小餅乾零食',
     image_LG: coffee_LG,
     image_SM: coffee_SM,
   },
   {
     title: '超快速網路',
-    content: '使用 Wifi Mesh，讓你在場域中都有順暢的網路',
+    content_LG: (
+      <p>
+        使用 Wifi Mesh，
+        <br /> 讓你在場域中都有順暢的網路
+      </p>
+    ),
+    content_SM: '使用 Wifi Mesh，讓你在場域中都有順暢的網路',
     image_LG: wifi_LG,
     image_SM: wifi_SM,
   },
   {
     title: '舒服的桌椅',
-    content:
+    content_LG: (
+      <p>
+        白色辦公桌設計簡潔大方，搭配上人體工學椅，
+        <br /> 讓您的身體在長時間辦公後仍能保持舒適
+      </p>
+    ),
+    content_SM:
       '白色辦公桌設計簡潔大方，搭配上人體工學椅，讓您的身體在長時間辦公後仍能保持舒適',
     image_LG: chair_LG,
     image_SM: chair_SM,
   },
   {
     title: '與火箭隊培訓營交流',
-    content:
+    content_LG: (
+      <p>
+        進駐者能夠與開發團隊暢通無阻地交流，
+        <br /> 共同分享各自的專業知識和經驗。
+      </p>
+    ),
+    content_SM:
       '進駐者能夠與開發團隊暢通無阻地交流，共同分享各自的專業知識和經驗。',
     image_LG: chat_LG,
     image_SM: chat_SM,
   },
   {
     title: '便捷的交通',
-    content: '共享空間位於捷運信義國小站附近，為您提供極佳的交通便利性。',
+    content_LG: (
+      <p>
+        共享空間位於捷運信義國小站附近，
+        <br /> 為您提供極佳的交通便利性。
+      </p>
+    ),
+    content_SM: '共享空間位於捷運信義國小站附近，為您提供極佳的交通便利性。',
     image_LG: traffic_LG,
     image_SM: traffic_SM,
   },
   {
     title: '超多美食在附近',
-    content: '無論你要日式、西式、台式，各種美食應有盡有',
+    content_LG: (
+      <p>
+        無論你要日式、西式、台式，
+        <br /> 各種美食應有盡有
+      </p>
+    ),
+    content_SM: '無論你要日式、西式、台式，各種美食應有盡有',
     image_LG: food_LG,
     image_SM: food_SM,
   },
@@ -167,7 +205,7 @@ export function Description() {
         {/* 硬體區塊 */}
         <div className="mb-12 lg:mb-[76px]">
           {/* 標題 */}
-          <p className="mb-4 text-xl font-bold lg:mb-6 lg:text-[28px]">#硬體</p>
+          <p className="mb-4 text-xl font-bold lg:mb-6 lg:text-[28px] relative inline-block costTextAccent">#硬體</p>
           {/* 硬體 */}
           <ul className="flex flex-col space-y-10">
             {hardwareDescriptions.map(
@@ -214,39 +252,44 @@ export function Description() {
         {/* 服務區塊 */}
         <div className="mb-10 lg:mb-20">
           {/* 服務 */}
-          <p className="mb-4 text-xl font-bold lg:mb-6 lg:text-[28px]">#服務</p>
-          <ul className="mb-2 space-y-7 lg:flex lg:flex-wrap lg:justify-center lg:space-y-0">
-            {serviceData.map(({ title, content, image_LG, image_SM }) => (
-              <li
-                key={title}
-                className="flex  items-center justify-between lg:mr-[60px] lg:w-1/3  lg:flex-col lg:text-center"
-              >
-                {/* 圖片 */}
-                <div className="h-12 w-12 rounded-full bg-white lg:mb-6 lg:h-[120px] lg:w-[120px] ">
-                  <Image
-                    src={image_SM}
-                    alt={title}
-                    width={48}
-                    height={48}
-                    className="lg:hidden"
-                  />
-                  <Image
-                    src={image_LG}
-                    alt={title}
-                    width={120}
-                    height={120}
-                    className="hidden lg:block"
-                  />
-                </div>
+          <p className="mb-4 text-xl font-bold lg:mb-6 lg:text-[28px] relative inline-block costTextAccent">#服務</p>
 
-                {/* 文字敘述 */}
-                <div className=" max-w-[268px] space-y-1 lg:max-w-[244px] lg:space-y-2">
-                  <p className="font-bold">{title}</p>
-                  <p className="text-sm text-neutral-600">{content}</p>
-                </div>
-              </li>
+          {/* 手機版服務項目 */}
+          <ul className="mb-2 space-y-7 lg:hidden">
+            {serviceData.map(({ title, content_SM, image_LG, image_SM }) => (
+              <ServiceCardMobile
+                key={title}
+                title={title}
+                content={content_SM}
+                image_SM={image_SM}
+              />
             ))}
           </ul>
+
+          {/* 桌機版服務項目 */}
+          <div className="">
+            <ul className="mb-2 hidden w-full space-y-7 lg:flex lg:flex-wrap lg:justify-center lg:space-y-0">
+              {serviceData.map(({ title, content_LG, image_LG }, index) => {
+                if (index < 3) {
+                  return (
+                    <ServiceCardPC
+                      title={title}
+                      content_LG={content_LG}
+                      image_LG={image_LG}
+                    />
+                  );
+                } else {
+                  return (
+                    <ServiceCardPC
+                      title={title}
+                      content_LG={content_LG}
+                      image_LG={image_LG}
+                    />
+                  );
+                }
+              })}
+            </ul>
+          </div>
         </div>
 
         {/* 跑馬燈區塊 */}
