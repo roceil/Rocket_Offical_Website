@@ -5,6 +5,7 @@ import promotion_SM from 'public/images/cost/promotion-sm.svg';
 import fillFormNowBtn from 'public/images/cost/fillFormNowBtn.svg';
 import CostCardPC from '../components/CostCardPC';
 import OrderBtn from '../components/OrderBtn';
+import CostCardMobile from '../components/CostCardMobile';
 
 const costCardData = [
   {
@@ -79,7 +80,7 @@ const costCardData = [
   },
 ];
 
-export function Cost() {
+function Cost() {
   return (
     <section className="group/promotion bg-[#EEE5FF]">
       <div className="container pb-12 pt-9  lg:flex lg:justify-center lg:pb-20 lg:pt-[60px]">
@@ -114,12 +115,16 @@ export function Cost() {
             }}
             className="mySwiper mb-8 lg:!hidden"
           >
-            <SwiperSlide className='!h-[448px] '>
-              <div className="mb-8 w-full h-full rounded-2xl bg-red-300 lg:hidden"></div>
-            </SwiperSlide>
-            <SwiperSlide className='!h-[448px] !w-[333px]'>
-              <div className="mb-8 w-full h-full rounded-2xl bg-red-300 lg:hidden"></div>
-            </SwiperSlide>
+            {costCardData.map(({ title, price, optional, service }) => (
+              <SwiperSlide>
+                <CostCardMobile
+                  title={title}
+                  price={price}
+                  optional={optional}
+                  service={service}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
 
           {/* 方案卡片_桌機版 */}
@@ -146,3 +151,5 @@ export function Cost() {
     </section>
   );
 }
+
+export default Cost;

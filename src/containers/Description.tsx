@@ -36,7 +36,7 @@ import traffic_LG from 'public/images/description/service/ic-traffic-lg.svg';
 import traffic_SM from 'public/images/description/service/ic-traffic-sm.svg';
 import food_LG from 'public/images/description/service/ic-food-lg.svg';
 import food_SM from 'public/images/description/service/ic-food-sm.svg';
-import ServiceCardMobile from 'src/pages/components/ServiceCardMobile';
+import ServiceCardMobile from '@/components/ServiceCardMobile';
 import ServiceCardPC from '../components/ServiceCardPC';
 
 const hardwareDescriptions = [
@@ -196,7 +196,7 @@ const serviceData = [
   },
 ];
 
-export function Description() {
+function Description() {
   return (
     <section className="container lg:flex lg:justify-center">
       <div className="w-full py-12 lg:max-w-[1076px] lg:py-20">
@@ -317,3 +317,4 @@ export function Description() {
     </section>
   );
 }
+export default Description;

@@ -37,7 +37,7 @@
     @apply after:absolute after:right-0 after:top-1/2 after:-z-10 after:h-[76px] after:w-20 after:translate-x-[50%] after:translate-y-[-50%] after:rounded-full after:bg-space_violet_dark after:opacity-50;
   }
   .costTextAccent {
-    @apply after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-1/2 after:w-full after:bg-accent;
+    @apply after:absolute after:bottom-1 after:left-0 after:-z-10 after:h-1/2 after:w-full after:bg-accent;
   }
   .orderNowBtnPosition {
     @apply absolute bottom-0 left-1/2 w-[332px] -translate-x-1/2 translate-y-1/2
@@ -55,5 +55,5 @@
   @apply !w-[300px];
 }
 .swiper-slide-prev {
-  @apply !w-[360px];
+  @apply !w-[332px];
 }

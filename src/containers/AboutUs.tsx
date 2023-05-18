@@ -1,4 +1,4 @@
-export function AboutUs() {
+function AboutUs() {
   return (
     <section className="bg-banner_bg">
       <div className="rounded-3xl bg-space_violet_tint xl:rounded-none">
@@ -31,3 +31,5 @@ export function AboutUs() {
     </section>
   );
 }
+
+export default AboutUs;

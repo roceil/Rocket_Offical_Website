@@ -20,7 +20,7 @@ const bannerRocketTexts = [
   },
 ];
 
-export function RocketCardPC({ pathname }: RocketCardProps) {
+function RocketCardPC({ pathname }: RocketCardProps) {
   const isRocket = pathname === '/' ? 'block' : 'hidden';
   const isActive = pathname === '/' ? 'opacity-100' : '';
 
@@ -81,3 +81,5 @@ export function RocketCardPC({ pathname }: RocketCardProps) {
     </div>
   );
 }
+
+export default RocketCardPC;

@@ -8,7 +8,7 @@ type RocketCardProps = {
   pathname: string;
 };
 
-export function RocketCardMobile({ pathname }: RocketCardProps) {
+function RocketCardMobile({ pathname }: RocketCardProps) {
   const isRocket = pathname === '/' ? 'block' : 'hidden';
 
   return (
@@ -54,3 +54,5 @@ export function RocketCardMobile({ pathname }: RocketCardProps) {
     </div>
   );
 }
+
+export default RocketCardMobile;

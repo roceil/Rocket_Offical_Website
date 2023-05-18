@@ -20,7 +20,7 @@ const bannerSpaceTexts = [
   },
 ];
 
-export function SpaceCardPC({ pathname }: BannerCardPCProps) {
+function SpaceCardPC({ pathname }: BannerCardPCProps) {
   const isShareSpace = pathname === '/sharespace' ? 'block' : 'hidden';
   const isActive = pathname === '/sharespace' ? 'opacity-100' : '';
   return (
@@ -87,3 +87,5 @@ export function SpaceCardPC({ pathname }: BannerCardPCProps) {
     </Link>
   );
 }
+
+export default SpaceCardPC;

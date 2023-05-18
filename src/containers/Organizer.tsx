@@ -102,7 +102,7 @@ const organizers = [
   },
 ];
 
-export function Organizer() {
+function Organizer() {
   return (
     <section className="bg-neutral-200">
       <div className=" relative pb-4 pt-9 lg:pb-10 lg:pt-14">
@@ -144,3 +144,5 @@ export function Organizer() {
     </section>
   );
 }
+
+export default Organizer;

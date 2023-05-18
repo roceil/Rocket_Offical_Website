@@ -24,7 +24,7 @@ const jobList = [
   },
 ];
 
-export function AboutRocket() {
+function AboutRocket() {
   return (
     <section className="bg-banner_bg">
       <div className="bg-rocket_blue_tint lg:rounded-[40px] xl:rounded-none">
@@ -137,3 +137,5 @@ export function AboutRocket() {
     </section>
   );
 }
+
+export default AboutRocket;

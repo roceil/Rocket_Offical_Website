@@ -143,7 +143,7 @@ const coachsDescriptions = [
   },
 ];
 
-export function AboutTraining() {
+function AboutTraining() {
   const [clickCoach, setClickCoach] = useState<string>('廖洧杰');
   const checkCoach = (name: string) => {
     return name === clickCoach
@@ -751,3 +751,5 @@ export function AboutTraining() {
     </section>
   );
 }
+
+export default AboutTraining;

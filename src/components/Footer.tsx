@@ -1,4 +1,4 @@
-export function Footer() {
+function Footer() {
   return (
     <footer className="flex items-center justify-center lg:py-9 py-5">
       <p className="hidden lg:block">Copyright © 2023 - Created by 六角學院 / 火箭隊培訓營</p>
@@ -10,3 +10,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;

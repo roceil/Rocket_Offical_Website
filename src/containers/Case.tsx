@@ -56,7 +56,7 @@ const caseList = [
   },
 ];
 
-export function Case() {
+function Case() {
   return (
     <section>
       <div className="container pb-[92px] pt-12 lg:pb-[120px] lg:pt-[92px]">
@@ -132,3 +132,5 @@ export function Case() {
     </section>
   );
 }
+
+export default Case;

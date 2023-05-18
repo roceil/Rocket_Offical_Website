@@ -51,7 +51,7 @@ const process = [
   },
 ];
 
-export function Question() {
+function Question() {
   return (
     <section className="pb-[76px] pt-[84px] lg:py-[128px]">
       {/* 培訓費用 */}
@@ -106,3 +106,5 @@ export function Question() {
     </section>
   );
 }
+
+export default Question;
