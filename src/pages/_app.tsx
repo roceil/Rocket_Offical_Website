@@ -3,8 +3,9 @@ import 'swiper/css';
 import type { AppProps } from 'next/app';
 
 import HeaderMarquee from '@/components/HeaderMarquee';
-import Banner from '../../containers/Banner';
-import Footer from '../../components/Footer';
+import Footer from '@/components/Footer';
+import Banner from '@/containers/Banner';
+
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

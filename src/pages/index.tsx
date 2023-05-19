@@ -1,10 +1,10 @@
-import AboutRocket from '../containers/AboutRocket';
-import Case from '../containers/Case';
-import AboutTraining from '../containers/AboutTraining';
-import Question from '../containers/Question';
-import Organizer from '../containers/Organizer';
+import AboutRocket from '@/containers/AboutRocket';
+import AboutTraining from '@/containers/AboutTraining';
+import Case from '@/containers/Case';
+import Organizer from '@/containers/Organizer';
+import Question from '@/containers/Question';
 
-export default function index() {
+export default function home() {
   return (
     <>
       <AboutRocket />
