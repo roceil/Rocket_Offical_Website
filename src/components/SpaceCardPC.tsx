@@ -3,7 +3,7 @@ import Link from 'next/link';
 import shareSpace from 'public/images/banner/shareSpace.png';
 import spaceHalfCircle from 'public/images/banner/spaceHalfCircle.svg';
 import spaceInterest from 'public/images/banner/spaceInterest.svg';
-import spaceBtnLG from 'public/images/banner/spaceBtnLG.svg';
+import spaceBtnLG from 'public/images/banner/spaceBtnLg.svg';
 type BannerCardPCProps = {
   pathname: string;
 };

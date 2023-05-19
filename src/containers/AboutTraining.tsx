@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper';
+import OrderBtn from '../components/OrderBtn';
+
 import orderNowBtn from 'public/images/aboutTraining/orderNowBtn.svg';
-import frontEnd from 'public/images/aboutTraining/frontEnd.svg';
-import backEnd from 'public/images/aboutTraining/backEnd.svg';
+import frontEnd from 'public/images/aboutTraining/frontend.svg';
+import backEnd from 'public/images/aboutTraining/backend.svg';
 import ui from 'public/images/aboutTraining/ui.svg';
 import weijie_LG from 'public/images/aboutTraining/coach-weijie-3x.png';
 import weijie_SM from 'public/images/aboutTraining/coach-weijie-2x.png';
@@ -13,9 +17,6 @@ import casper_LG from 'public/images/aboutTraining/coach-casper-3x.png';
 import casper_SM from 'public/images/aboutTraining/coach-casper-2x.png';
 import justin_LG from 'public/images/aboutTraining/coach-justin-3x.png';
 import justin_SM from 'public/images/aboutTraining/coach-justin-2x.png';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper';
-import OrderBtn from '../components/OrderBtn';
 
 const frontEndTexts = [
   { text: '網頁切版技能：HTML5、CSS3、SCSS、Bootsrap5、TailwindCSS' },
