@@ -53,7 +53,7 @@ function AboutRocket() {
 
   return (
     <section className="z-10 bg-banner_bg" id="rocketSection">
-      <div className="bg-rocket_blue_tint lg:rounded-[40px] xl:rounded-none">
+      <div className="bg-rocket_blue_tint rounded-3xl xl:rounded-none">
         <div className="container py-9 lg:py-[60px] xl:px-[72px]">
           <div className="lg:flex lg:justify-between">
             {/* 文字區塊 */}

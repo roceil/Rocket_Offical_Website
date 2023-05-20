@@ -9,10 +9,10 @@
     letter-spacing: 0.02em;
   }
   a {
-    @apply transform duration-300 hover:opacity-80 active:scale-75;
+    @apply transform duration-300 lg:hover:opacity-80 active:scale-90;
   }
   button {
-    @apply transform duration-300 active:scale-75;
+    @apply transform duration-300 active:scale-90;
   }
 }
 

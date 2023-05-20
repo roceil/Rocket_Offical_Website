@@ -7,11 +7,11 @@ import spaceHighlight from 'public/images/banner/shareSpace/spaceHighlight.svg';
 import arrowLeft from 'public/images/banner/arrowLeft.svg';
 
 function SpaceCardMobile({ pathname }: { pathname: string }) {
-  const isActive = pathname === '/sharespace' ? '!opacity-100' : 'opacity-0';
+  const isActive = pathname === '/sharespace' ? '!opacity-100' : '';
 
   return (
-    <Link href="/sharespace" className="block hover:opacity-100">
-      <div className="group relative h-[134px] w-[294px] rounded-2xl border-2 border-neutral-200 bg-white py-6 pl-6 ">
+    <Link href="/sharespace" className="block hover:opacity-100 z-50">
+      <div className=" relative h-[134px] w-[294px] rounded-2xl border-2 border-neutral-200 bg-white py-6 pl-6 ">
         {/* 裝飾用半圓 */}
         <div
           className={`absolute right-0 top-1/2 h-20 w-[38px] -translate-y-1/2 translate-x-[calc(100%+2px)] opacity-50 group-active:opacity-100 ${isActive}`}

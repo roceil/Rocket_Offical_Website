@@ -14,7 +14,7 @@ function RocketCardMobile({ pathname }: RocketCardProps) {
   const isActive = pathname === '/' ? '!opacity-100' : '';
 
   return (
-    <Link href="/" className="block hover:opacity-100">
+    <Link href="/" className="block hover:opacity-100 z-50">
       <div className="relative h-[134px] w-[294px] rounded-2xl border-2 border-neutral-200 bg-white py-6 pl-6">
         {/* 裝飾用半圓 */}
         <div
