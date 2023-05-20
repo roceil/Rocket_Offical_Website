@@ -116,7 +116,7 @@ function Cost() {
             className="costSwiper mb-8 lg:!hidden"
           >
             {costCardData.map(({ title, price, optional, service }) => (
-              <SwiperSlide>
+              <SwiperSlide key={title}>
                 <CostCardMobile
                   title={title}
                   price={price}

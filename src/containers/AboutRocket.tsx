@@ -34,26 +34,26 @@ function AboutRocket() {
   gsap.registerPlugin(ScrollTrigger);
   const aboutRocketRef = useRef(null);
 
-  // useEffect(() => {
-  //   const scrollTL = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: '#rocketSection',
-  //       pin: true, //重要！ pin需設為true
-  //       markers: true,
-  //       scrub: true,
-  //       start: 'top top',
-  //       end: 'bottom top',
-  //     },
-  //   });
+  useEffect(() => {
+    const scrollTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#rocketSection',
+        // pin: true, //重要！ pin需設為true
+        // markers: true, // 顯示起始點
+        scrub: true,
+        start: 'top 20%',
+        end: 'top -25%',
+      },
+    });
 
-  //   scrollTL.to('#jobCard1', { yPercent: '-150' });
-  //   scrollTL.to('#jobCard2', { yPercent: '-150' }, '<');
-  //   scrollTL.to('#jobCard3', { yPercent: '-150' }, '<');
-  // }, []);
+    scrollTL.to('#jobCard1', { yPercent: '-150' });
+    scrollTL.to('#jobCard2', { yPercent: '-150' }, '<');
+    scrollTL.to('#jobCard3', { yPercent: '-150' }, '<');
+  }, []);
 
   return (
-    <section className="top-0 z-10 bg-banner_bg" >
-      <div className="bg-rocket_blue_tint lg:rounded-[40px] xl:rounded-none" id="rocketSection">
+    <section className="z-10 bg-banner_bg" id="rocketSection">
+      <div className="bg-rocket_blue_tint lg:rounded-[40px] xl:rounded-none">
         <div className="container py-9 lg:py-[60px] xl:px-[72px]">
           <div className="lg:flex lg:justify-between">
             {/* 文字區塊 */}
@@ -75,12 +75,13 @@ function AboutRocket() {
             </div>
 
             {/* 圖片區塊 */}
-            <ul className="flex flex-col items-center justify-center space-y-6 overflow-auto lg:h-[592px] lg:justify-start lg:space-y-8">
+            <ul className="flex flex-col items-center justify-center space-y-6 overflow-hidden lg:h-[592px] lg:justify-start lg:space-y-8">
               {/* 手機版卡片 */}
               <ul className="space-y-6 lg:hidden">
                 {jobList.map(({ title, img, jobTitle, skills }) => {
                   return (
                     <AboutRocketJobCardMobile
+                      key={title}
                       title={title}
                       img={img}
                       jobTitle={jobTitle}
@@ -95,6 +96,7 @@ function AboutRocket() {
                 {jobList.map(({ title, img, jobTitle, skills }, index) => {
                   return (
                     <AboutRocketJobCardPC
+                      key={title}
                       title={title}
                       img={img}
                       jobTitle={jobTitle}

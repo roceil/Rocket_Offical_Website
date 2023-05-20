@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -146,6 +146,8 @@ const coachsDescriptions = [
 
 function AboutTraining() {
   const [clickCoach, setClickCoach] = useState<string>('廖洧杰');
+  const coachsRef = useRef<HTMLDivElement>(null);
+  const [isScroll, setIsScroll] = useState(false);
   const checkCoach = (name: string) => {
     return name === clickCoach
       ? '!bg-rocket_blue_tint'
@@ -154,9 +156,19 @@ function AboutTraining() {
 
   // ==================== 確認點擊的教練(電腦版) ====================
   const handleCoachClick = (name: string) => {
-    console.log(name);
+    setIsScroll(true);
+    // 更新 clickCoach 狀態
     setClickCoach(name);
   };
+
+  useEffect(() => {
+    if (coachsRef.current && isScroll) {
+      coachsRef.current.scrollIntoView({
+        block: 'start',
+      });
+      setIsScroll(false);
+    }
+  }, [isScroll]);
 
   // ==================== 確認點擊的教練(手機版) ====================
   const checkCoachName = ({ activeIndex }: { activeIndex: number }) => {
@@ -182,10 +194,6 @@ function AboutTraining() {
         return;
     }
   };
-
-  useEffect(() => {
-    console.log(clickCoach);
-  }, [clickCoach]);
 
   return (
     <section className="bg-neutral-100">
@@ -621,7 +629,10 @@ function AboutTraining() {
         </div>
 
         {/* 教練團 */}
-        <div className=" flex justify-center bg-neutral-100 pb-[60px] pt-[52px]">
+        <div
+          className=" flex justify-center bg-neutral-100 pb-[60px] pt-[52px]"
+          ref={coachsRef}
+        >
           <div className="container max-w-[1076px] lg:px-0">
             <p className="h3 -mb-4 lg:mb-10">教練團</p>
 
@@ -647,7 +658,7 @@ function AboutTraining() {
                           className="absolute bottom-0 left-0"
                         />
 
-                        {/* 文字 */}
+                        {/* 姓名 */}
                         <div className="absolute -top-5 right-4 h-[104px] w-12">
                           <div className="relative h-full w-full rounded-xl bg-neutral-700"></div>
                           <div className="absolute -top-1 right-1 flex h-full w-full items-center justify-center rounded-xl border-2 border-neutral-700 bg-white ">

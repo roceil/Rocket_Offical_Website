@@ -205,7 +205,9 @@ function Description() {
         {/* 硬體區塊 */}
         <div className="mb-12 lg:mb-[76px]">
           {/* 標題 */}
-          <p className="mb-4 text-xl font-bold lg:mb-6 lg:text-[28px] relative inline-block costTextAccent">#硬體</p>
+          <p className="costTextAccent relative mb-4 inline-block text-xl font-bold lg:mb-6 lg:text-[28px]">
+            #硬體
+          </p>
           {/* 硬體 */}
           <ul className="flex flex-col space-y-10">
             {hardwareDescriptions.map(
@@ -252,7 +254,9 @@ function Description() {
         {/* 服務區塊 */}
         <div className="mb-10 lg:mb-20">
           {/* 服務 */}
-          <p className="mb-4 text-xl font-bold lg:mb-6 lg:text-[28px] relative inline-block costTextAccent">#服務</p>
+          <p className="costTextAccent relative mb-4 inline-block text-xl font-bold lg:mb-6 lg:text-[28px]">
+            #服務
+          </p>
 
           {/* 手機版服務項目 */}
           <ul className="mb-2 space-y-7 lg:hidden">
@@ -273,6 +277,7 @@ function Description() {
                 if (index < 3) {
                   return (
                     <ServiceCardPC
+                      key={title}
                       title={title}
                       content_LG={content_LG}
                       image_LG={image_LG}
@@ -281,6 +286,7 @@ function Description() {
                 } else {
                   return (
                     <ServiceCardPC
+                      key={title}
                       title={title}
                       content_LG={content_LG}
                       image_LG={image_LG}
@@ -294,8 +300,8 @@ function Description() {
 
         {/* 跑馬燈區塊 */}
         <Marquee speed={40} pauseOnHover>
-          {marqueeItems.map(({ image_LG, image_SM }) => (
-            <div className="mr-6">
+          {marqueeItems.map(({ image_LG, image_SM }, index) => (
+            <div key={index} className="mr-6">
               <Image
                 src={image_SM}
                 alt="carousel"

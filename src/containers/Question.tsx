@@ -62,7 +62,10 @@ function Question() {
         <ul className="border-b-2 border-neutral-200 lg:w-full">
           {questions.map(({ id, question, answer }) => {
             return (
-              <li className="flex space-x-4 border-t-2 border-neutral-200 py-5 lg:space-x-8">
+              <li
+                key={id}
+                className="flex space-x-4 border-t-2 border-neutral-200 py-5 lg:space-x-8"
+              >
                 {/* 編號 */}
                 <div className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-neutral-700 bg-rocket_blue_tint">
                   <span className="text-xs font-bold">{id}</span>
@@ -87,7 +90,10 @@ function Question() {
         <ul className="border-b-2 border-neutral-200 lg:w-full">
           {process.map(({ id, question, answer }) => {
             return (
-              <li className="flex space-x-4 border-t-2 border-neutral-200 py-5 lg:space-x-8">
+              <li
+                key={id}
+                className="flex space-x-4 border-t-2 border-neutral-200 py-5 lg:space-x-8"
+              >
                 {/* 編號 */}
                 <div className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-neutral-700 bg-rocket_blue_tint">
                   <span className="text-xs font-bold">{id}</span>

@@ -34,7 +34,7 @@ function CostCardMobile({
       {/* 選項 */}
       <ul className="flex w-full flex-col space-y-3">
         {service.map(({ text, highlight }) => (
-          <li className="flex items-center space-x-3">
+          <li key={text} className="flex items-center space-x-3">
             <Image src={check_SM} alt="check" width={28} height={28} />
             <p className={`relative z-10 ${highlight && 'costTextAccent'}`}>
               {text}

@@ -22,7 +22,10 @@ export function AboutRocketJobCardMobile({
       <ul className="mb-3 space-x-2">
         {skills.map((skill) => {
           return (
-            <li className="inline-block rounded-full border-2 border-rocket_blue_default px-4 py-2 text-xs font-bold text-rocket_blue_dark">
+            <li
+              key={skill}
+              className="inline-block rounded-full border-2 border-rocket_blue_default px-4 py-2 text-xs font-bold text-rocket_blue_dark"
+            >
               {skill}
             </li>
           );

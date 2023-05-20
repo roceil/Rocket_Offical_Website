@@ -11,12 +11,7 @@ type CostCardPCProps = {
   }[];
 };
 
-function CostCardPC({
-  title,
-  price,
-  optional,
-  service,
-}: CostCardPCProps) {
+function CostCardPC({ title, price, optional, service }: CostCardPCProps) {
   return (
     <li
       className={`h-[608px] w-[526px] rounded-2xl border-2 border-neutral-700 bg-white px-20 pb-12 pt-9 ${
@@ -34,7 +29,7 @@ function CostCardPC({
       {/* 服務項目*/}
       <ul className="space-y-4">
         {service.map(({ text, highlight }) => (
-          <li className="flex items-center space-x-3">
+          <li key={text} className="flex items-center space-x-3">
             <Image src={check_LG} alt="check" width={28} height={28} />
             <p
               className={`relative z-10 text-xl ${

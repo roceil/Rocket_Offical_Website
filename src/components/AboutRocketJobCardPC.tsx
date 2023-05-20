@@ -18,7 +18,7 @@ export function AboutRocketJobCardPC({
 }: AboutRocketJobCardPCProps) {
   return (
     <li
-      className="flex xl:w-[636px] justify-between rounded-3xl bg-white p-9"
+      className="flex justify-between rounded-3xl bg-white p-9 xl:w-[636px]"
       id={`jobCard${index + 1}`}
     >
       <div className="min-w-[290px]">
@@ -29,7 +29,10 @@ export function AboutRocketJobCardPC({
           <ul className="mb-3 space-x-2">
             {skills.map((skill) => {
               return (
-                <li className="inline-block rounded-full border-2 border-rocket_blue_default px-4 py-2 font-bold text-rocket_blue_dark">
+                <li
+                  key={skill}
+                  className="inline-block rounded-full border-2 border-rocket_blue_default px-4 py-2 font-bold text-rocket_blue_dark"
+                >
                   {skill}
                 </li>
               );
