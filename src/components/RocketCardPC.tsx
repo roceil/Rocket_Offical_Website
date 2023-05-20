@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import rocket_icon_LG from 'public/images/banner/rocket/rocket_LG.svg';
 import rocketHalfCircle_LG from 'public/images/banner/rocket/rocketHalfCircle_LG.svg';
-import rocketHighLight_LG from 'public/images/banner/rocket/highLightPC.svg';
+import rocketHighLight_LG from 'public/images/banner/rocket/highlightPC.svg';
 import rocketBtnLG from 'public/images/banner/rocket/rocketBtnLG.svg';
 import interest from 'public/images/banner/rocket/interest.svg';
 
