@@ -261,7 +261,7 @@ function AboutTraining() {
               <p className="mt-3">
                 主要專精 JavaScript 前端 (65%)、後端 (35%) 開發，投入語言為
                 HTML、CSS、JavaScript，
-                <span className="font-bold">
+                <span className="bg-accent font-bold">
                   適合有一些 HTML、CSS、JS 基礎的學員報名
                 </span>
                 。
@@ -332,7 +332,7 @@ function AboutTraining() {
                   <p className="mt-4">
                     主要專精 JavaScript 前端 (65%)、後端 (35%) 開發，投入語言為
                     HTML、CSS、JavaScript，
-                    <span className="font-bold">
+                    <span className=" bg-accent font-bold">
                       適合有一些 HTML、CSS、JS 基礎的學員報名
                     </span>
                     。
@@ -348,7 +348,7 @@ function AboutTraining() {
                     <li className="">
                       會用 CSS Flexbox 排過網頁，有 RWD 響應式網頁概念，需提交
                       CSS 切版作品，
-                      <span className="font-bold">
+                      <span className="bg-accent font-bold">
                         請在履歷上需附網頁切版作品
                       </span>
                       ，Codepen、GitHub Pages 皆可
@@ -408,7 +408,10 @@ function AboutTraining() {
 
               <p className="mt-3">
                 後端工程師組主要專注為後端開發，投入後端語言為 C#、.Net，
-                <span className="font-bold">適合無程式背景的學員報名</span>。
+                <span className="bg-accent font-bold">
+                  適合無程式背景的學員報名
+                </span>
+                。
               </p>
             </div>
 
@@ -468,8 +471,8 @@ function AboutTraining() {
                     關於後端
                   </p>
                   <p className="mt-4">
-                    後端工程師組主要專注為後端開發，投入後端語言為{' '}
-                    <span className="font-bold">
+                    後端工程師組主要專注為後端開發，投入後端語言為
+                    <span className="bg-accent font-bold leading-[0.6]">
                       C#、.Net，適合無程式背景的學員報名
                     </span>
                     。
@@ -541,7 +544,7 @@ function AboutTraining() {
 
               <p className="mt-3">
                 主要以網頁 UI 設計 50%、網頁前端 50% 的雙技能樹養成，
-                <span className="font-bold">
+                <span className="bg-accent font-bold">
                   適合具備視覺背景，操作過繪圖軟體尤佳，歡迎無工作經驗的學員報名
                 </span>
                 。
@@ -590,7 +593,7 @@ function AboutTraining() {
 
                   <p className="mt-3">
                     主要以網頁 UI 設計 50%、網頁前端 50% 的雙技能樹養成，
-                    <span className="font-bold">
+                    <span className="bg-accent font-bold">
                       適合具備視覺背景，操作過繪圖軟體尤佳，歡迎無工作經驗的學員報名
                     </span>
                     。

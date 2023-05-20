@@ -4,11 +4,12 @@ import SpaceCardMobile from '@/components/SpaceCardMobile';
 import RocketCardPC from '@/components/RocketCardPC';
 import SpaceCardPC from '@/components/SpaceCardPC';
 
+
 export default function Banner() {
   const router = useRouter();
-  // 取得當前頁面路由
+  // ====== 取得當前頁面路由 ======
   const { pathname } = router;
-  console.log(pathname);
+
   return (
     <section>
       <div className="bg-banner_bg">
@@ -18,7 +19,7 @@ export default function Banner() {
           <RocketCardMobile pathname={pathname} />
 
           {/* 共同空間 */}
-          <SpaceCardMobile />
+          <SpaceCardMobile pathname={pathname} />
         </div>
 
         {/* 桌機版 banner */}

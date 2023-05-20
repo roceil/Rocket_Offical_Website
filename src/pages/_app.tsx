@@ -6,11 +6,13 @@ import HeaderMarquee from '@/components/HeaderMarquee';
 import Footer from '@/components/Footer';
 import Banner from '@/containers/Banner';
 
+import ScrollToTop  from '../components/ScrollToTop';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <HeaderMarquee />
+      <ScrollToTop />
       <Banner />
       <Component {...pageProps} />
       <Footer />

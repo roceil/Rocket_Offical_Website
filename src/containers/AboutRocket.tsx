@@ -1,7 +1,12 @@
-import Image from 'next/image';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 import frontEnd from 'public/images/aboutRocket/about-rocket-frontend.svg';
 import backEnd from 'public/images/aboutRocket/about-rocket-backend.svg';
 import uiDesign from 'public/images/aboutRocket/about-rocket-ui.svg';
+import { AboutRocketJobCardMobile } from '../components/AboutRocketJobCardMobile';
+import { AboutRocketJobCardPC } from '../components/AboutRocketJobCardPC';
+import { useEffect, useRef } from 'react';
 
 const jobList = [
   {
@@ -25,9 +30,30 @@ const jobList = [
 ];
 
 function AboutRocket() {
+  // ==================== GSAP ====================
+  gsap.registerPlugin(ScrollTrigger);
+  const aboutRocketRef = useRef(null);
+
+  // useEffect(() => {
+  //   const scrollTL = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: '#rocketSection',
+  //       pin: true, //重要！ pin需設為true
+  //       markers: true,
+  //       scrub: true,
+  //       start: 'top top',
+  //       end: 'bottom top',
+  //     },
+  //   });
+
+  //   scrollTL.to('#jobCard1', { yPercent: '-150' });
+  //   scrollTL.to('#jobCard2', { yPercent: '-150' }, '<');
+  //   scrollTL.to('#jobCard3', { yPercent: '-150' }, '<');
+  // }, []);
+
   return (
-    <section className="bg-banner_bg">
-      <div className="bg-rocket_blue_tint lg:rounded-[40px] xl:rounded-none">
+    <section className="top-0 z-10 bg-banner_bg" >
+      <div className="bg-rocket_blue_tint lg:rounded-[40px] xl:rounded-none" id="rocketSection">
         <div className="container py-9 lg:py-[60px] xl:px-[72px]">
           <div className="lg:flex lg:justify-between">
             {/* 文字區塊 */}
@@ -49,84 +75,32 @@ function AboutRocket() {
             </div>
 
             {/* 圖片區塊 */}
-            <ul className="flex flex-col items-center justify-center space-y-6 overflow-y-auto lg:h-[592px] lg:space-y-8 lg:justify-start">
+            <ul className="flex flex-col items-center justify-center space-y-6 overflow-auto lg:h-[592px] lg:justify-start lg:space-y-8">
               {/* 手機版卡片 */}
-              <ul className="lg:hidden space-y-6">
+              <ul className="space-y-6 lg:hidden">
                 {jobList.map(({ title, img, jobTitle, skills }) => {
                   return (
-                    <li className="w-full rounded-3xl bg-white px-4 py-5">
-                      <p className="h3 mb-4">{title}</p>
-
-                      {/* 技能區塊 */}
-                      <ul className="mb-3 space-x-2">
-                        {skills.map((skill) => {
-                          return (
-                            <li className="inline-block rounded-full border-2 border-rocket_blue_default px-4 py-2 text-xs font-bold text-rocket_blue_dark">
-                              {skill}
-                            </li>
-                          );
-                        })}
-                      </ul>
-
-                      {/* 職稱 */}
-                      <p className="mb-7 text-xl font-bold text-neutral-500">
-                        {jobTitle}
-                      </p>
-
-                      {/* 圖片 */}
-                      <div className="relative flex items-center justify-center">
-                        <Image
-                          src={img}
-                          alt="前端工程師"
-                          width={164}
-                          height={160}
-                          className="relative z-10"
-                        />
-                        <div className="absolute bottom-0 left-0 h-[60px] w-full rounded-xl bg-neutral-200"></div>
-                      </div>
-                    </li>
+                    <AboutRocketJobCardMobile
+                      title={title}
+                      img={img}
+                      jobTitle={jobTitle}
+                      skills={skills}
+                    />
                   );
                 })}
               </ul>
 
               {/* 桌機版卡片 */}
               <ul className="hidden lg:block lg:space-y-8">
-                {jobList.map(({ title, img, jobTitle, skills }) => {
+                {jobList.map(({ title, img, jobTitle, skills }, index) => {
                   return (
-                    <li className="flex rounded-3xl bg-white p-9 w-[636px] justify-between">
-                      <div className="min-w-[290px]">
-                        <div className="mb-20">
-                          <p className="h3 mb-3">{title}</p>
-
-                          {/* 技能區塊 */}
-                          <ul className="mb-3 space-x-2">
-                            {skills.map((skill) => {
-                              return (
-                                <li className="inline-block rounded-full border-2 border-rocket_blue_default px-4 py-2 font-bold text-rocket_blue_dark">
-                                  {skill}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </div>
-
-                        {/* 職稱 */}
-                        <p className="mb-7 text-xl font-bold text-neutral-500">
-                          {jobTitle}
-                        </p>
-                      </div>
-
-                      {/* 圖片 */}
-                      <div className="relative flex items-center justify-center bg-neutral-200 rounded-3xl">
-                        <Image
-                          src={img}
-                          alt="前端工程師"
-                          width={164}
-                          height={160}
-                          className="relative z-10 right-[54px]"
-                        />
-                      </div>
-                    </li>
+                    <AboutRocketJobCardPC
+                      title={title}
+                      img={img}
+                      jobTitle={jobTitle}
+                      skills={skills}
+                      index={index}
+                    />
                   );
                 })}
               </ul>

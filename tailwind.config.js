@@ -17,7 +17,7 @@ module.exports = {
         space_violet_default: '#CAB2F1',
         space_violet_tint: '#EEE5FF',
         space_violet_light: '#F5F1FF',
-        accent: '#FFD887',
+        accent: '#FFEEA3',
         neutral_700: '#363636',
         neutral_600: '#757575',
         neutral_500: '#9A9A9A',

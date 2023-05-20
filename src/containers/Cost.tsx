@@ -113,7 +113,7 @@ function Cost() {
             pagination={{
               clickable: true,
             }}
-            className="mySwiper mb-8 lg:!hidden"
+            className="costSwiper mb-8 lg:!hidden"
           >
             {costCardData.map(({ title, price, optional, service }) => (
               <SwiperSlide>
