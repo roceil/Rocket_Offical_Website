@@ -41,8 +41,8 @@ function AboutRocket() {
         // pin: true, //重要！ pin需設為true
         // markers: true, // 顯示起始點
         scrub: true,
-        start: 'top 20%',
-        end: 'top -25%',
+        start: 'top 17%',
+        end: 'top -12%',
       },
     });
 
@@ -53,7 +53,7 @@ function AboutRocket() {
 
   return (
     <section className="z-10 bg-banner_bg" id="rocketSection">
-      <div className="bg-rocket_blue_tint rounded-3xl xl:rounded-none">
+      <div className="bg-rocket_blue_tint rounded xl:rounded-none">
         <div className="container py-9 lg:py-[60px] xl:px-[72px]">
           <div className="lg:flex lg:justify-between">
             {/* 文字區塊 */}
