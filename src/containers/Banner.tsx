@@ -4,7 +4,6 @@ import SpaceCardMobile from '@/components/SpaceCardMobile';
 import RocketCardPC from '@/components/RocketCardPC';
 import SpaceCardPC from '@/components/SpaceCardPC';
 
-
 export default function Banner() {
   const router = useRouter();
   // ====== 取得當前頁面路由 ======
@@ -14,7 +13,7 @@ export default function Banner() {
     <section>
       <div className="bg-banner_bg">
         {/* 手機版 banner */}
-        <div className="container space-y-12 py-16 lg:hidden">
+        <div className="container left-[-10px] flex flex-col items-center space-y-12 py-16 lg:hidden relative">
           {/* 火箭隊 */}
           <RocketCardMobile pathname={pathname} />
 

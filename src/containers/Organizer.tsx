@@ -122,6 +122,7 @@ function Organizer() {
                       width={100}
                       height={100}
                       className="hidden lg:block"
+                      priority
                     />
 
                     <Image
@@ -130,6 +131,7 @@ function Organizer() {
                       width={80}
                       height={80}
                       className="lg:hidden"
+                      priority
                     />
                   </li>
 
