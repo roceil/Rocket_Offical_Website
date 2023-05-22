@@ -53,7 +53,7 @@ function AboutRocket() {
 
   return (
     <section className="z-10 bg-banner_bg" id="rocketSection">
-      <div className="bg-rocket_blue_tint rounded xl:rounded-none">
+      <div className="rounded bg-rocket_blue_tint xl:rounded-none">
         <div className="container py-9 lg:py-[60px] xl:px-[72px]">
           <div className="lg:flex lg:justify-between">
             {/* 文字區塊 */}
@@ -77,7 +77,7 @@ function AboutRocket() {
             {/* 圖片區塊 */}
             <ul className="flex flex-col items-center justify-center space-y-6 overflow-hidden lg:h-[592px] lg:justify-start lg:space-y-8">
               {/* 手機版卡片 */}
-              <ul className="space-y-6 lg:hidden">
+              <ul className="w-full space-y-6 lg:hidden">
                 {jobList.map(({ title, img, jobTitle, skills }) => {
                   return (
                     <AboutRocketJobCardMobile

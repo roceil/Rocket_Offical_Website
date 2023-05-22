@@ -7,16 +7,11 @@ type orderBtnProps = {
   needPosition?: boolean;
 };
 
-function OrderBtn({
-  image,
-  text,
-  bgColor,
-  needPosition,
-}: orderBtnProps) {
+function OrderBtn({ image, text, bgColor, needPosition }: orderBtnProps) {
   return (
     <button
       type="button"
-      className={`group w-[332px] rounded-2xl border-2 border-neutral-700 py-5 lg:flex lg:w-[1076px] lg:items-center lg:justify-center lg:py-6 ${
+      className={`group w-[335px] rounded-2xl border-2 border-neutral-700 py-5 lg:flex lg:w-[1076px] lg:items-center lg:justify-center lg:py-6 ${
         needPosition && 'orderNowBtnPosition'
       }`}
       style={{

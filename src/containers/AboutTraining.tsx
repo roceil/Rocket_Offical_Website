@@ -197,7 +197,7 @@ function AboutTraining() {
 
   return (
     <section className="bg-[#F8F9FD]">
-      <div className="relative pb-[76px] pt-[30px] lg:pt-[38px]">
+      <div className="relative pb-[72px] pt-[30px] lg:pt-[38px] lg:pb-[128px]">
         <h2 className="h2 absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-center">
           關於培訓
         </h2>
@@ -630,7 +630,7 @@ function AboutTraining() {
 
         {/* 教練團 */}
         <div
-          className=" flex justify-center bg-[#F8F9FD] pb-[60px] pt-[52px]"
+          className=" flex justify-center bg-[#F8F9FD] pt-[52px]"
           ref={coachsRef}
         >
           <div className="container max-w-[1076px] lg:px-0">

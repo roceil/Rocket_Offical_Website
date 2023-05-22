@@ -90,10 +90,14 @@ function Cost() {
             <Image
               src={promotion_SM}
               alt="2023 年為試營運階段，進駐可享有限定優惠價！"
+              width={331}
+              height={45}
               className="lg:hidden"
             />
             <Image
               src={promotion_LG}
+              width={386}
+              height={56}
               alt="2023 年為試營運階段，進駐可享有限定優惠價！"
               className="ml-20 hidden translate-y-[100%] transform duration-300 group-hover/promotion:translate-y-0 lg:block"
             />

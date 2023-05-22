@@ -104,7 +104,7 @@ const organizers = [
 
 function Organizer() {
   return (
-    <section className="bg-neutral-200">
+    <section className="bg-[#F0F0F0]">
       <div className=" relative pb-4 pt-9 lg:pb-10 lg:pt-14">
         <p className="h3 absolute left-12 top-0 -translate-y-1/2 lg:left-[72px]">
           主辦、協辦單位

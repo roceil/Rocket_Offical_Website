@@ -209,7 +209,7 @@ function Description() {
             #硬體
           </p>
           {/* 硬體 */}
-          <ul className="flex flex-col space-y-10">
+          <ul className="flex flex-col space-y-10 text-justify">
             {hardwareDescriptions.map(
               ({ title, content, image_LG, image_SM, reverse = false }) => (
                 <li
@@ -219,11 +219,11 @@ function Description() {
                   }`}
                 >
                   {/* 圖片 */}
-                  <div className="mb-4 lg:mb-0">
+                  <div className="mb-4 lg:mb-0 w-full">
                     <Image
                       src={image_SM}
                       alt={title}
-                      width={332}
+                      width={335}
                       height={222}
                       className="lg:hidden"
                     />
