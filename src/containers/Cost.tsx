@@ -145,11 +145,13 @@ function Cost() {
           </ul>
 
           {/* 填表單_按鈕 */}
-          <OrderBtn
-            text="馬上填表單！"
-            bgColor="#F5F1FF"
-            image={fillFormNowBtn}
-          />
+          <div className="flex justify-center">
+            <OrderBtn
+              text="馬上填表單！"
+              bgColor="#F5F1FF"
+              image={fillFormNowBtn}
+            />
+          </div>
         </div>
       </div>
     </section>

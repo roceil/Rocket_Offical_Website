@@ -144,6 +144,7 @@ const coachsDescriptions = [
   },
 ];
 
+
 function AboutTraining() {
   const [clickCoach, setClickCoach] = useState<string>('廖洧杰');
   const coachsRef = useRef<HTMLDivElement>(null);

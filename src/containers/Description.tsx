@@ -219,7 +219,7 @@ function Description() {
                   }`}
                 >
                   {/* 圖片 */}
-                  <div className="mb-4 lg:mb-0 w-full">
+                  <div className="mb-4 lg:mb-0 w-full flex justify-center">
                     <Image
                       src={image_SM}
                       alt={title}
