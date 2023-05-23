@@ -219,7 +219,7 @@ function Description() {
                   }`}
                 >
                   {/* 圖片 */}
-                  <div className="mb-4 lg:mb-0 w-full flex justify-center">
+                  <div className="mb-4 flex w-full justify-center lg:mb-0">
                     <Image
                       src={image_SM}
                       alt={title}
@@ -308,6 +308,7 @@ function Description() {
                 width={332}
                 height={240}
                 className="lg:hidden"
+                priority
               />
               <Image
                 src={image_LG}
@@ -315,6 +316,7 @@ function Description() {
                 width={636}
                 height={424}
                 className="hidden lg:block"
+                priority
               />
             </div>
           ))}
