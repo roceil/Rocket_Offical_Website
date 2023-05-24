@@ -18,7 +18,8 @@ export default function CustomHead({
     '火箭隊是一個專為軟體工程師設計的線下培訓營。我們提供高質量的技術培訓課程，幫助學員獲得實用的軟體開發技能。透過火箭隊的課程，學員能夠學習到程式設計語言、開發工具和框架，並且獲得實戰經驗。';
 
   const defaultCanonicalUrl = 'https://rocket-offical-website.vercel.app/';
-  const defaultImage = 'https://raw.githubusercontent.com/roceil/Rocket_Offical_Website/main/public/images/customHead/aboutRocket.png';
+  const defaultImage =
+    'https://raw.githubusercontent.com/roceil/Rocket_Offical_Website/main/public/images/customHead/aboutRocket.png';
 
   return (
     <>
@@ -66,7 +67,7 @@ export default function CustomHead({
         <link rel="canonical" href={pageCanonicalUrl || defaultCanonicalUrl} />
       </Head>
 
-      <h1 className="hidden">
+      <h1 className="sr-only">
         {pageTitle ? `${pageTitle} - ${defaultTitle}` : defaultTitle}
       </h1>
     </>
