@@ -197,7 +197,7 @@ function AboutTraining() {
   };
 
   return (
-    <section className="bg-[#F8F9FD]">
+    <section className="bg-[#F8F9FD] text-justify">
       <div className="relative pb-[72px] pt-[30px] lg:pt-[38px] lg:pb-[128px]">
         <h2 className="h2 absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-center">
           關於培訓
@@ -214,7 +214,7 @@ function AboutTraining() {
         {/* 近期梯次_手機版 */}
         <div className="container lg:hidden">
           <div className="relative mb-20 flex items-center rounded-[50px] bg-white px-5 py-3">
-            <p className="absolute left-5 top-1/2 -translate-y-1/2 border-r-2 border-neutral-200 pr-3 text-sm font-bold">
+            <p className="absolute left-5 top-1/2 -translate-y-1/2 border-r-2 border-[#F0F0F0] pr-3 text-sm font-bold">
               近期梯次
             </p>
 
@@ -230,7 +230,7 @@ function AboutTraining() {
         <div className="container hidden lg:block">
           <div className="flex w-full justify-center">
             <div className="flex w-full max-w-[636px] items-center justify-between rounded-full bg-white px-5 py-3">
-              <span className="border-r-2 border-neutral-700 py-[5px] pr-3 font-bold">
+              <span className="border-r-2 border-[#F0F0F0] py-[5px] pr-3 font-bold">
                 近期梯次
               </span>
               <span>

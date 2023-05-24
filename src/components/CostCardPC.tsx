@@ -22,7 +22,7 @@ function CostCardPC({ title, price, optional, service }: CostCardPCProps) {
       <p className="mb-5 text-center text-2xl font-bold">{title}</p>
 
       {/* 價格 */}
-      <div className="mb-7 bg-neutral-200 p-10 text-center text-4xl font-bold">
+      <div className="mb-7 bg-[#F0F0F0] p-10 text-center text-4xl font-bold">
         <p>{price}</p>
       </div>
 

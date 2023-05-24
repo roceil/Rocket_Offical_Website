@@ -27,7 +27,7 @@ function CostCardMobile({
       <p className="h3 mb-4">{title}</p>
 
       {/* 價格 */}
-      <div className="mb-4 w-full bg-neutral-200 py-5 text-center text-2xl font-bold">
+      <div className="mb-4 w-full bg-[#F0F0F0] py-5 text-center text-2xl font-bold">
         <p>{price}</p>
       </div>
 

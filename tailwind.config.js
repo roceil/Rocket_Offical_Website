@@ -24,7 +24,7 @@ module.exports = {
         neutral_400: '#CDCDCD',
         neutral_300: '#E0E0E0',
         neutral_200: '#F0F0F0',
-        test_neutral_100: '#F8F9FD',
+        neutral_100: '#F8F9FD',
       },
       backgroundImage: {
         banner_bg: "url('/images/banner/banner-bg.svg')",

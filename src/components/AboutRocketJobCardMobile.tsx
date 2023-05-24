@@ -44,7 +44,7 @@ export function AboutRocketJobCardMobile({
           height={160}
           className="relative z-10 h-[160px]"
         />
-        <div className="absolute bottom-0 left-0 h-[60px] w-full rounded-xl bg-neutral-200"></div>
+        <div className="absolute bottom-0 left-0 h-[60px] w-full rounded-xl bg-[#F0F0F0]"></div>
       </div>
     </li>
   );
